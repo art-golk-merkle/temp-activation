@@ -1,0 +1,181 @@
+<!doctype html>
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Merkle Adobe Activation Brief</title>
+<style>
+/* Layout: one reading column, status first, detail below. Serif headings over a sans body. */
+:root {
+  --bg: #f6f4ef;
+  --surface: #ffffff;
+  --fg: #1c1f26;
+  --muted: #5d6471;
+  --rule: #d9d5cc;
+  --accent: #2a5a8c;
+  --ok: #2e7044;
+  --warn: #9a5b00;
+  --crit: #a3271f;
+  --display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14171c;
+    --surface: #1d2129;
+    --fg: #e9e7e1;
+    --muted: #a3a9b4;
+    --rule: #323843;
+    --accent: #8fb6e6;
+    --ok: #7fcf9c;
+    --warn: #f0b860;
+    --crit: #ff8a80;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14171c;
+  --surface: #1d2129;
+  --fg: #e9e7e1;
+  --muted: #a3a9b4;
+  --rule: #323843;
+  --accent: #8fb6e6;
+  --ok: #7fcf9c;
+  --warn: #f0b860;
+  --crit: #ff8a80;
+  color-scheme: dark;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 32px;
+  margin: 0;
+}
+main { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+h1, h2 { font-family: var(--display); font-weight: 600; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(30px, 6vw, 42px); line-height: 1.15; }
+h2 { font-size: 22px; line-height: 1.25; margin-bottom: 14px; }
+p { margin: 0; max-width: 65ch; }
+.eyebrow { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.lede { font-size: 18px; color: var(--muted); margin-top: 16px; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 20px; font-size: 14px; color: var(--muted); }
+.meta strong { color: var(--fg); font-weight: 600; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.stat { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 16px; }
+.stat b { display: block; font-family: var(--display); font-size: 30px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.stat span { font-size: 14px; color: var(--muted); }
+.list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.list li { display: grid; grid-template-columns: 28px 1fr auto; gap: 4px 14px; padding: 14px 0; border-bottom: 1px solid var(--rule); min-width: 0; }
+.list .n { color: var(--muted); font-variant-numeric: tabular-nums; }
+.list .t { font-weight: 600; }
+.list .d { grid-column: 2 / -1; color: var(--muted); font-size: 15px; }
+.pill { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; align-self: start; }
+.complete { color: var(--ok); }
+.started { color: var(--warn); }
+.HIGH { color: var(--crit); }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 18px; min-width: 0; }
+.card h3 { margin: 0 0 8px; font-size: 16px; }
+.card p { font-size: 15px; color: var(--muted); }
+.card p + p { margin-top: 8px; }
+.note { border-left: 3px solid var(--accent); padding: 4px 0 4px 16px; color: var(--muted); }
+.note p { max-width: 65ch; }
+footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<main>
+  <header>
+    <p class="eyebrow">Adobe activation brief</p>
+    <h1>Merkle Adobe Activation Brief</h1>
+    <p class="lede">Status of the Lilly Customer Journey Analytics audit for the Zepbound and Mounjaro HCP properties, with open items and the findings that sit beyond the original scope.</p>
+    <div class="meta">
+      <span>Client: <strong>Lilly</strong></span>
+      <span>Delivered by: <strong>Adobe Integrated Services</strong></span>
+      <span>Architect: <strong>Sean Kelaghan</strong></span>
+      <span>Dated: <strong>March 2026</strong></span>
+    </div>
+  </header>
+
+  <section aria-labelledby="summary">
+    <h2 id="summary">Summary</h2>
+    <div class="stats">
+      <div class="stat"><b>6 of 8</b><span>original tasks complete</span></div>
+      <div class="stat"><b>4 of 4</b><span>quick wins complete</span></div>
+      <div class="stat"><b>4</b><span>high-severity findings</span></div>
+      <div class="stat"><b>76%</b><span>of traffic was unknown before the waterfall fix</span></div>
+    </div>
+    <p style="margin-top:16px">The audit covered marketing channel classification, event type standardization, data architecture, and reporting enablement. Core channel attribution work is done. Two tasks are still in progress, and the four high-severity findings need owners before the next reporting cycle.</p>
+  </section>
+
+  <section aria-labelledby="tasks">
+    <h2 id="tasks">Original tasks</h2>
+    <ol class="list">
+      <li><span class="n">1</span><span class="t">Marketing channel audit</span><span class="pill complete">Complete</span><span class="d">Resolved 76% unknown traffic through proper waterfall rule ordering: organic, tracking codes, referrers, then direct.</span></li>
+      <li><span class="n">2</span><span class="t">Test and compare tracking configurations</span><span class="pill complete">Complete</span><span class="d">Built and evaluated rule set versions v1, v2 and v3 side by side.</span></li>
+      <li><span class="n">3</span><span class="t">Refine direct traffic attribution</span><span class="pill complete">Complete</span><span class="d">Direct traffic is attributed only at session start, not across the full session.</span></li>
+      <li><span class="n">4</span><span class="t">Classify cross-domain and intra-site traffic</span><span class="pill complete">Complete</span><span class="d">Rules now categorize movement between brand sites.</span></li>
+      <li><span class="n">5</span><span class="t">Review and guide event types</span><span class="pill complete">Complete</span><span class="d">Documented a recommended core set of standardized event types across properties.</span></li>
+      <li><span class="n">6</span><span class="t">Map derived fields across properties</span><span class="pill complete">Complete</span><span class="d">Exported and documented derived fields per property using the Excel template.</span></li>
+      <li><span class="n">7</span><span class="t">Establish internal traffic exclusion</span><span class="pill started">In progress</span><span class="d">Configure IP-based filtering at WebSDK level or as a CJA segment. There is no strong evidence of internal company traffic yet, so more information is needed.</span></li>
+      <li><span class="n">8</span><span class="t">Build insight reports</span><span class="pill started">In progress</span><span class="d">Deliver working examples of channel and traffic behavior reports.</span></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="quick">
+    <h2 id="quick">Quick wins</h2>
+    <ol class="list">
+      <li><span class="n">1</span><span class="t">Share updated taxonomy through the Temporary Data View</span><span class="pill complete">Complete</span><span class="d">Updated dimension and metric labels are published to all CJA users, with no connection changes.</span></li>
+      <li><span class="n">2</span><span class="t">Open segment and metric creation to all users</span><span class="pill complete">Complete</span><span class="d">Analysts can build segments and calculated metrics without an admin. This is a Product Profile permission change.</span></li>
+      <li><span class="n">3</span><span class="t">Consolidate three Zepbound connections into one</span><span class="pill complete">Complete</span><span class="d">The three connections share one WebSDK configId and are all ECID-only, so the audience split adds no governance value.</span></li>
+      <li><span class="n">4</span><span class="t">Add EDB email datasets to CJA</span><span class="pill complete">Complete</span><span class="d">Email send and tracking data in AEP, stitched on HCPREFID, now supports email to web to conversion reporting.</span></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="tech">
+    <h2 id="tech">Technical review</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Connections</h3>
+        <p><strong>Zepbound:</strong> three connections from one WebSDK, split by audience (Consumer 6M, HCP 345k, Lilly HCP 941k). The split has no PII justification because it is ECID-only.</p>
+        <p><strong>Mounjaro:</strong> four connections split by geography and channel (US and Canada combined, US only, Canada only, Email/AJO). A unified consumer and HCP dataset is an advantage over Zepbound.</p>
+      </article>
+      <article class="card">
+        <h3>Data quality</h3>
+        <p><strong>linkClicks inflation</strong> is confirmed on both brands. A stale value of 1 is carried on every non-click event, which overcounts by 8 to 10 times.</p>
+      </article>
+      <article class="card">
+        <h3>Architecture</h3>
+        <p><strong>36 datasets</strong> across two sandboxes.</p>
+        <p><strong>Cross-domain ECID</strong> is confirmed working through the lilly.com root cookie.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="findings">
+    <h2 id="findings">Findings beyond scope</h2>
+    <ol class="list">
+      <li><span class="n">1</span><span class="t">Enrollment domain is untagged</span><span class="pill HIGH">High</span><span class="d">enrollment.zepbound.lilly.com has no WebSDK, so patient enrollment cannot be measured.</span></li>
+      <li><span class="n">2</span><span class="t">Three Zepbound connections from one WebSDK</span><span class="pill HIGH">High</span><span class="d">One configId with three audience-based connections, all ECID-only. The split does not serve data governance.</span></li>
+      <li><span class="n">3</span><span class="t">Identity resolution gap</span><span class="pill HIGH">High</span><span class="d">GBS is live in one connection but targets HCPREFID, which carries winner rotation and lexicographic selection risks. WebSDK connections remain unstitched ECID-only.</span></li>
+      <li><span class="n">4</span><span class="t">No offline conversion data</span><span class="pill HIGH">High</span><span class="d">CJA has no datasets with offline events such as Rx write-ups or purchases, so the digital journey cannot be measured end to end.</span></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="next">
+    <h2 id="next">Open items and decisions</h2>
+    <div class="note">
+      <p>Confirm whether internal traffic exists before choosing between WebSDK IP filtering and a CJA segment (task 7).</p>
+      <p style="margin-top:10px">Name an owner for each high-severity finding and agree a date to close the enrollment tagging and offline data gaps.</p>
+      <p style="margin-top:10px">Finish the insight report examples (task 8) so analysts can use them as templates.</p>
+    </div>
+  </section>
+
+  <footer>
+    Source: Lilly CJA Master Report, Adobe Integrated Services. Figures are as reported in that audit and have not been re-verified.
+  </footer>
+</main>
